@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Yamba</string>
+    <string name="hello_world">Hola mundo!!</string>
+    <string name="menu_settings">Configuraciones</string>
+    <string name="title_activity_status">ActividadEstado</string>
+	<string name="titleStatus">Actualización del Estado</string>
+	<string name="hintText">Por favor escriba su estado en 140 caracteres</string>
+	<string name="buttonUpdate">Actualizar</string>
+	<string name="counterInitValue">000</string>
+</resources>
