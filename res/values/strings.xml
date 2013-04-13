@@ -7,4 +7,5 @@
 	<string name="titleStatus">Status Update</string>
 	<string name="hintText">Please enter your 140-character status</string>
 	<string name="buttonUpdate">Update</string>
+	<string name="counterInitValue">000</string>
 </resources>
