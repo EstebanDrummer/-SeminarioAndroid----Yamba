@@ -47,7 +47,7 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
         twitter.setAPIRootUrl("http://yamba.marakana.com/api");
         Log.d(TAG, "Set twitter object API root URL");
     }
-    //asincronamente
+    //asincronamente hilos
     
     class PostToTwitter extends AsyncTask<String, Integer, String>{
 
