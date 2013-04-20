@@ -4,12 +4,17 @@ import winterwell.jtwitter.Twitter;
 import winterwell.jtwitter.TwitterException;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Color;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,13 +24,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 
-public class StatusActivity extends Activity implements OnClickListener, TextWatcher{
+public class StatusActivity extends Activity implements OnClickListener, TextWatcher, OnSharedPreferenceChangeListener{
 
 	private static final String TAG ="StatusActivity";
 	EditText editText;
 	Button updateButton;
 	Twitter twitter;
 	TextView textCount;
+	
+	SharedPreferences prefs;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,8 +50,10 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
         editText.addTextChangedListener(this);
         
         Log.d(TAG, "Create Twitter object");
-        twitter = new Twitter("student","password");
-        twitter.setAPIRootUrl("http://yamba.marakana.com/api");
+       // twitter = new Twitter("student","password");
+        //twitter.setAPIRootUrl("http://yamba.marakana.com/api");
+        prefs=PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.registerOnSharedPreferenceChangeListener(this);
         Log.d(TAG, "Set twitter object API root URL");
     }
     //asincronamente hilos
@@ -55,7 +64,8 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 		protected String doInBackground(String... statuses) {
 			// TODO Auto-generated method stub
 			try{
-				Twitter.Status status =twitter.updateStatus(statuses[0]);
+				//Twitter.Status status =twitter.updateStatus(statuses[0]);
+				Twitter.Status status = getTwitter().updateStatus(statuses[0]);
 				return status.text;
 			}catch(TwitterException e){
 				Log.e(TAG,e.toString());
@@ -75,7 +85,8 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_status, menu);
+    	MenuInflater inflater =getMenuInflater();
+    	inflater.inflate(R.menu.menu, menu);
         return true;
     }
 
@@ -110,6 +121,35 @@ Log.d(TAG, "onClicked");
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch(item.getItemId()){
+		case R.id.itemPrefs:
+			startActivity(new Intent(this, PrefsActivity.class));
+			break;
+		}
+		return true;
+	}
+
+	@Override
+	public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+		// invalidate Twitter object 
+		twitter =null;
+	}
+	
+	private Twitter getTwitter(){
+		if(twitter == null){
+			String username, password, apiRoot;
+			username = prefs.getString("username", "student");
+			password = prefs.getString("password", "password");
+			apiRoot =prefs.getString("apiRoot", "http://yamba.marakana.com/api");
+			
+			//Connect to twitter service
+			twitter = new Twitter(username,password);
+			twitter.setAPIRootUrl(apiRoot);
+		}
+		return twitter;
 	}
 
     

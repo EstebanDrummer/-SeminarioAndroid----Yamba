@@ -9,4 +9,5 @@
 	<string name="hintText">Por favor escriba su estado en 140 caracteres</string>
 	<string name="buttonUpdate">Actualizar</string>
 	<string name="counterInitValue">000</string>
+	<string name="titleUsername">Nombre de Usuario</string>
 </resources>

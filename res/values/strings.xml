@@ -8,4 +8,12 @@
 	<string name="hintText">Please enter your 140-character status</string>
 	<string name="buttonUpdate">Update</string>
 	<string name="counterInitValue">000</string>
+	<string name="titleUsername">Username</string>
+    <string name="summaryUsername">Please enter your username</string>
+	<string name="titlePassword">Password</string>
+	<string name="summaryPassword">Please enter your Password</string>
+	<string name="titleApiRoot">APIRoot</string>
+	<string name="summaryApiRoot">URL of Root API for you service</string>
+	<string name="titlePrefs">titlePrefs</string>
+	<string name="titleItemPrefs">Preferences</string>
 </resources>
