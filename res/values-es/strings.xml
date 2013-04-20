@@ -10,4 +10,11 @@
 	<string name="buttonUpdate">Actualizar</string>
 	<string name="counterInitValue">000</string>
 	<string name="titleUsername">Nombre de Usuario</string>
+	<string name="summaryUsername">Por favor ingrese su Nombre de Usuario</string>
+	<string name="titlePassword">Contraseña</string>
+	<string name="summaryPassword">Por favor ingrese su Contraseña</string>
+	<string name="titleApiRoot">API</string>
+	<string name="summaryApiRoot">Ingrese la URL de su servicio</string>
+	<string name="titlePrefs">Preferencias</string>
+	<string name="titleItemPrefs">Preferencias</string>
 </resources>
