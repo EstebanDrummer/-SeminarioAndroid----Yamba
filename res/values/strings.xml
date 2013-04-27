@@ -16,4 +16,6 @@
 	<string name="summaryApiRoot">URL of Root API for you service</string>
 	<string name="titlePrefs">Preferences</string>
 	<string name="titleItemPrefs">Preferences</string>
+	<string name="titleServiceStop">Stop Service</string>
+	<string name="titleServiceStart">Start Service</string>
 </resources>
