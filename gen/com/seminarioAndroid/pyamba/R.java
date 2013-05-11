@@ -24,14 +24,24 @@ public final class R {
         public static final int LinearLayout1=0x7f090000;
         public static final int buttonUpdate=0x7f090003;
         public static final int editText=0x7f090002;
-        public static final int itemPrefs=0x7f090005;
-        public static final int itemServiceStart=0x7f090006;
-        public static final int itemServiceStop=0x7f090007;
-        public static final int menu_settings=0x7f090004;
+        public static final int itemPrefs=0x7f09000c;
+        public static final int itemPurge=0x7f09000d;
+        public static final int itemStatus=0x7f09000a;
+        public static final int itemTimeline=0x7f09000b;
+        public static final int itemToggleService=0x7f09000e;
+        public static final int listTimeline=0x7f090007;
+        public static final int menu_settings=0x7f090009;
         public static final int textCount=0x7f090001;
+        public static final int textCreatedAt=0x7f090005;
+        public static final int textText=0x7f090006;
+        public static final int textTimeline=0x7f090008;
+        public static final int textUser=0x7f090004;
     }
     public static final class layout {
         public static final int activity_status=0x7f030000;
+        public static final int row=0x7f030001;
+        public static final int timeline=0x7f030002;
+        public static final int timeline_basic=0x7f030003;
     }
     public static final class menu {
         public static final int activity_status=0x7f080000;
@@ -44,6 +54,8 @@ public final class R {
         public static final int hello_world=0x7f060001;
         public static final int hintText=0x7f060005;
         public static final int menu_settings=0x7f060002;
+        public static final int msgAllDataPurged=0x7f060014;
+        public static final int msgSetupPrefs=0x7f060015;
         public static final int summaryApiRoot=0x7f06000d;
         public static final int summaryPassword=0x7f06000b;
         public static final int summaryUsername=0x7f060009;
@@ -51,9 +63,11 @@ public final class R {
         public static final int titleItemPrefs=0x7f06000f;
         public static final int titlePassword=0x7f06000a;
         public static final int titlePrefs=0x7f06000e;
+        public static final int titlePurge=0x7f060013;
         public static final int titleServiceStart=0x7f060011;
         public static final int titleServiceStop=0x7f060010;
         public static final int titleStatus=0x7f060004;
+        public static final int titleTimeline=0x7f060012;
         public static final int titleUsername=0x7f060008;
         public static final int title_activity_status=0x7f060003;
     }

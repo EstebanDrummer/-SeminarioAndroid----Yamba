@@ -111,4 +111,15 @@ private static final String[] MAX_CREATED_AT_COLUMNS = { "max("
 			db.close();
 		}
 	}
+	
+	public void delete() {
+		// Open Database
+		SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+		// Delete the data
+		db.delete(TABLE, null, null);
+
+		// Close Database
+		db.close();
+	}  
 }

@@ -81,12 +81,12 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 		}
     }
 
-    @Override
+  /*  @Override
     public boolean onCreateOptionsMenu(Menu menu) {
     	MenuInflater inflater =getMenuInflater();
     	inflater.inflate(R.menu.menu, menu);
         return true;
-    }
+    }*/
 
 	@Override
 	public void onClick(View v) {
@@ -121,13 +121,13 @@ Log.d(TAG, "onClicked");
 		
 	}
 	
-		@Override
+	/*	@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.itemServiceStart:
+		case R.id.itemToggleService:
 		startService(new Intent(this, UpdaterService.class)); //
 		break;
-		case R.id.itemServiceStop:
+		case R.id.itemToggleService:
 		stopService(new Intent(this, UpdaterService.class)); //
 		break;
 		case R.id.itemPrefs:
@@ -135,7 +135,7 @@ Log.d(TAG, "onClicked");
 		break;
 		}
 		return true;
-		}
+		}*/
 
 	/*@Override
 	public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {

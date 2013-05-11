@@ -18,4 +18,8 @@
 	<string name="titleItemPrefs">Preferences</string>
 	<string name="titleServiceStop">Stop Service</string>
 	<string name="titleServiceStart">Start Service</string>
+	<string name="titleTimeline"> Time line</string>
+	<string name="titlePurge">Purge Data</string>
+	<string name="msgAllDataPurged">Al data has been purged</string>
+	<string name="msgSetupPrefs">Please enter your name, password and server to use</string>
 </resources>

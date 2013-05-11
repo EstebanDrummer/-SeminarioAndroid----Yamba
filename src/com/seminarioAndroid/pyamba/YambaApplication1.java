@@ -30,6 +30,11 @@ public class YambaApplication1 extends Application implements
 		}
 		return statusData;
 	}
+	
+	public SharedPreferences getPrefs(){
+		return prefs;
+	}
+	
 	public void setServiceRunning(boolean serviceRunning) {
 		this.serviceRunning = serviceRunning;
 	}
