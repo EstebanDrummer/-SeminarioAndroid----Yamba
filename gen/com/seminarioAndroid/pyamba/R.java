@@ -48,12 +48,15 @@ public final class R {
         public static final int menu=0x7f080001;
     }
     public static final class string {
+        public static final int Firefox=0x7f060018;
+        public static final int Slashdot=0x7f060016;
         public static final int app_name=0x7f060000;
         public static final int buttonUpdate=0x7f060006;
         public static final int counterInitValue=0x7f060007;
         public static final int hello_world=0x7f060001;
         public static final int hintText=0x7f060005;
         public static final int menu_settings=0x7f060002;
+        public static final int minago=0x7f060017;
         public static final int msgAllDataPurged=0x7f060014;
         public static final int msgSetupPrefs=0x7f060015;
         public static final int summaryApiRoot=0x7f06000d;

@@ -17,7 +17,6 @@ public class YambaApplication1 extends Application implements
 	private static final String TAG = YambaApplication1.class.getSimpleName();
 	public Twitter twitter; //
 	private SharedPreferences prefs;
-
 	private boolean serviceRunning;
 	private StatusData statusData; //
 
@@ -55,8 +54,8 @@ public class YambaApplication1 extends Application implements
 
 	public synchronized Twitter getTwitter() { //
 		if (this.twitter == null) {
-			String username = this.prefs.getString("username", "");
-			String password = this.prefs.getString("password", "");
+			String username = this.prefs.getString("username", "student");
+			String password = this.prefs.getString("password", "password");
 			String apiRoot = prefs.getString("apiRoot",
 					"http://yamba.marakana.com/api");
 			if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)

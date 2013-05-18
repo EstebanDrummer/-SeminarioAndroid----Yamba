@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.View;
-
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -13,9 +12,11 @@ import android.widget.Toast;
 import android.widget.SimpleCursorAdapter.ViewBinder;
 
 public class TimelineActivity extends BaseActivity { //
+	DbHelper1 dbHelper;// este
 	Cursor cursor;
 	ListView listTimeline;
 	SimpleCursorAdapter adapter;
+	
 	static final String[] FROM = { DbHelper1.C_CREATED_AT, DbHelper1.C_USER,
 			DbHelper1.C_TEXT };
 	static final int[] TO = { R.id.textCreatedAt, R.id.textUser, R.id.textText };

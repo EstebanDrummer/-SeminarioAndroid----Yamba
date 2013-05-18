@@ -3,17 +3,12 @@ package com.seminarioAndroid.pyamba;
 import winterwell.jtwitter.Twitter;
 import winterwell.jtwitter.TwitterException;
 import android.app.Activity;
-import android.content.Intent;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -54,8 +49,16 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
         Log.d(TAG, "Set twitter object API root URL");
     }
     //asincronamente hilos
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		String status = editText.getText().toString();
+		new PostToTwitter().execute(status);
+		Log.d(TAG, "onClicked");
+	}
     
-    class PostToTwitter extends AsyncTask<String, Integer, String>{
+    class PostToTwitter extends AsyncTask<String, Integer, String> {
 
 		@Override
 		protected String doInBackground(String... statuses) {
@@ -87,14 +90,6 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
     	inflater.inflate(R.menu.menu, menu);
         return true;
     }*/
-
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-String status =editText.getText().toString();
-new PostToTwitter().execute(status);
-Log.d(TAG, "onClicked");
-	}
 
 	@Override
 	public void afterTextChanged(Editable statusText) {

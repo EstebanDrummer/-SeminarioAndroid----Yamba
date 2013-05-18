@@ -12,8 +12,8 @@ import android.widget.Toast;
  * 
  * StatusActivity
  */
-public class BaseActivity extends Activity { //
-	YambaApplication1 yamba; //
+public class BaseActivity extends Activity { 
+	YambaApplication1 yamba; 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

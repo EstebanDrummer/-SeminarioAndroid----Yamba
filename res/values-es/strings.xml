@@ -17,4 +17,7 @@
 	<string name="summaryApiRoot">Ingrese la URL de su servicio</string>
 	<string name="titlePrefs">Preferencias</string>
 	<string name="titleItemPrefs">Preferencias</string>
+	<string name="Slashdot">Slashdot</string>
+    <string name="minago">10 minutes ago</string>
+    <string name="Firefox">Firefox comes to Android</string>
 </resources>
