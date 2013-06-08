@@ -2,7 +2,6 @@ package com.seminarioAndroid.pyamba;
 
 import winterwell.jtwitter.Twitter;
 import winterwell.jtwitter.TwitterException;
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class StatusActivity extends Activity implements OnClickListener, TextWatcher{
+public class StatusActivity extends BaseActivity implements OnClickListener, TextWatcher{
 
 	private static final String TAG ="StatusActivity";
 	EditText editText;

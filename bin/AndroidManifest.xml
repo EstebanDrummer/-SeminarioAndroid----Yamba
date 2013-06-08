@@ -1,8 +1,19 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seminarioAndroid.pyamba"
     android:versionCode="1"
     android:versionName="1.0" >
-
+    <permission android:name="com.seminarioAndroid.pyamba.SEND_TIMELINE_NOTIFICATIONS"
+    android:label="@string/send_timeline_notifications_permission_label"
+    android:description="@string/send_timeline_notifications_permission_description"
+    android:permissionGroup="android.permission-group.PERSONAL_INFO"
+    android:protectionLevel="normal" />    
+    
+    <permission android:name="ccom.seminarioAndroid.pyamba.RECEIVE_TIMELINE_NOTIFICATIONS"
+    android:label="@string/receive_timeline_notifications_permission_label"
+    android:description="@string/receive_timeline_notifications_permission_description"
+    android:permissionGroup="android.permission-group.PERSONAL_INFO"
+    android:protectionLevel="normal" />    
+  
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -10,9 +21,9 @@
         android:name=".YambaApplication1">
         
 <activity android:name=".TimelineActivity" android:label="@string/titleTimeline">
-	<intent-filter> <!-- -->
-		<action android:name="android.intent.action.MAIN" /> <!-- -->
-		<category android:name="android.intent.category.LAUNCHER" /> <!-- -->
+	<intent-filter> 
+		<action android:name="android.intent.action.MAIN" /> 
+		<category android:name="android.intent.category.LAUNCHER" /> 
 	</intent-filter>
 </activity>
         
@@ -25,10 +36,42 @@
             android:label="@string/titlePrefs"
             ></activity>
         <service android:name=".UpdaterService"></service>
+        	    <receiver android:name=".NetworkReceiver">
+	      <intent-filter>
+	        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+	      </intent-filter>
+	    </receiver>    
+        <receiver android:name=".BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <provider 
+            android:name=".StatusProvider"
+            android:authorities="com.seminarioAndroid.pyamba.statusprovider"
+            ></provider>
+	<receiver 
+         android:name=".YambaWidget" 
+         android:label="@string/msgLastTimelineUpdate">
+         <intent-filter>
+           <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+         </intent-filter>
+         <intent-filter>
+           <action android:name="com.seminarioAndroid.pyamba.NEW_STATUS" />
+         </intent-filter>
+         <meta-data android:name="android.appwidget.provider"
+         android:resource="@xml/yamba_widget_info" />
+       </receiver>
     </application>
         <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="15" />
+        android:targetSdkVersion="15" />  
   
 	<uses-permission android:name="android.permission.INTERNET"/>
-</manifest>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="com.seminarioAndroid.pyamba.SEND_TIMELINE_NOTIFICATIONS" />
+    <uses-permission android:name="com.seminarioAndroid.pyamba.RECEIVE_TIMELINE_NOTIFICATIONS" />  
+</manifest> 
+

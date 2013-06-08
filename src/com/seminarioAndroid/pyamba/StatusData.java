@@ -16,6 +16,7 @@ public static final String C_ID = "_id";
 public static final String C_CREATED_AT = "created_at";
 public static final String C_TEXT = "txt";
 public static final String C_USER = "user";
+
 private static final String GET_ALL_ORDER_BY = C_CREATED_AT + " DESC";
 private static final String[] MAX_CREATED_AT_COLUMNS = { "max("
 + StatusData.C_CREATED_AT + ")" };

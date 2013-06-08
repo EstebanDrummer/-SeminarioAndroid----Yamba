@@ -77,8 +77,7 @@ public class YambaApplication1 extends Application implements
 		}
 		try {
 			List<Twitter.Status> statusUpdates = twitter.getFriendsTimeline();
-			long latestStatusCreatedAtTime = this.getStatusData()
-					.getLatestStatusCreatedAtTime();
+			long latestStatusCreatedAtTime = this.getStatusData().getLatestStatusCreatedAtTime();
 			int count = 0;
 			ContentValues values = new ContentValues();
 			for (Twitter.Status status : statusUpdates) {

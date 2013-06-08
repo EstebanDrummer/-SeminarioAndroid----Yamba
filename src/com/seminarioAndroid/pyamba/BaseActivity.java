@@ -33,8 +33,7 @@ public class BaseActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) { //
 		switch (item.getItemId()) {
 		case R.id.itemPrefs:
-			startActivity(new Intent(this, PrefsActivity.class)
-					.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
+			startActivity(new Intent(this, PrefsActivity.class).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
 			break;
 		case R.id.itemToggleService:
 			if (yamba.isServiceRunning()) {
@@ -45,8 +44,7 @@ public class BaseActivity extends Activity {
 			break;
 		case R.id.itemPurge:
 			((YambaApplication1) getApplication()).getStatusData().delete();
-			Toast.makeText(this, R.string.msgAllDataPurged, Toast.LENGTH_LONG)
-					.show();
+			Toast.makeText(this, R.string.msgAllDataPurged, Toast.LENGTH_LONG).show();
 			break;
 		case R.id.itemTimeline:
 			startActivity(new Intent(this, TimelineActivity.class).addFlags(
@@ -54,8 +52,7 @@ public class BaseActivity extends Activity {
 					Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
 			break;
 		case R.id.itemStatus:
-			startActivity(new Intent(this, StatusActivity.class)
-					.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
+			startActivity(new Intent(this, StatusActivity.class).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
 			break;
 		}
 		return true;
