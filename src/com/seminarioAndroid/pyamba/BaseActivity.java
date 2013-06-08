@@ -54,6 +54,9 @@ public class BaseActivity extends Activity {
 		case R.id.itemStatus:
 			startActivity(new Intent(this, StatusActivity.class).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT));
 			break;
+		case R.id.itemRefresh:
+			startService(new Intent(this, UpdaterService.class)); //
+			break;
 		}
 		return true;
 	}

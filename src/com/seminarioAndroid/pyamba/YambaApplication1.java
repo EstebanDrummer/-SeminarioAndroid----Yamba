@@ -15,6 +15,8 @@ public class YambaApplication1 extends Application implements
 		OnSharedPreferenceChangeListener { //
 	
 	private static final String TAG = YambaApplication1.class.getSimpleName();
+	public static final String LOCATION_PROVIDER_NONE = "NONE";//new
+	public static final long INTERVAL_NEVER = 0;
 	public Twitter twitter; //
 	private SharedPreferences prefs;
 	private boolean serviceRunning;
@@ -37,6 +39,15 @@ public class YambaApplication1 extends Application implements
 	public void setServiceRunning(boolean serviceRunning) {
 		this.serviceRunning = serviceRunning;
 	}
+	
+	public String getProvider() {
+		return prefs.getString("provider", LOCATION_PROVIDER_NONE);
+    }
+	
+	  public long getInterval() {
+		    // For some reason storing interval as long doesn't work
+		    return Long.parseLong(prefs.getString("interval", "0"));
+		  }
 
 	@Override
 	public void onCreate() { //

@@ -19,8 +19,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" 
         android:name=".YambaApplication1">
-        
-<activity android:name=".TimelineActivity" android:label="@string/titleTimeline">
+ <activity android:name=".TimelineActivity" android:label="@string/titleTimeline">         
+<!--<activity android:name=".WhereAmI" android:label="@string/app_name">--> 
 	<intent-filter> 
 		<action android:name="android.intent.action.MAIN" /> 
 		<category android:name="android.intent.category.LAUNCHER" /> 
@@ -72,6 +72,8 @@
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="com.seminarioAndroid.pyamba.SEND_TIMELINE_NOTIFICATIONS" />
-    <uses-permission android:name="com.seminarioAndroid.pyamba.RECEIVE_TIMELINE_NOTIFICATIONS" />  
+    <uses-permission android:name="com.seminarioAndroid.pyamba.RECEIVE_TIMELINE_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
 </manifest> 
 
