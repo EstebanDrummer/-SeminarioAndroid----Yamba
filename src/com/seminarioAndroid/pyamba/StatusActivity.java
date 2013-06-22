@@ -1,7 +1,6 @@
 package com.seminarioAndroid.pyamba;
 
 import winterwell.jtwitter.Twitter;
-import winterwell.jtwitter.TwitterException;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;

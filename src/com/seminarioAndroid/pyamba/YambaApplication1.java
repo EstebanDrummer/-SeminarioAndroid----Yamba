@@ -45,8 +45,8 @@ public class YambaApplication1 extends Application implements
     }
 	
 	  public long getInterval() {
-		    // For some reason storing interval as long doesn't work
-		    return Long.parseLong(prefs.getString("interval", "0"));
+		    
+		    return Long.parseLong(prefs.getString("intervalValues", "0"));
 		  }
 
 	@Override

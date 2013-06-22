@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="summaryUpdaterInterval">How often should Updater service run?</string>
 	<string name="titleUpdaterInterval">Updater Interval</string>
@@ -35,8 +36,7 @@
     <string name="msgLastTimelineUpdate">Yamba Widget</string>
       <string name="msgNotificationTitle">New Yamba Status Updates</string>
   <string name="msgNotificationMessage">You\'ve got %d new status update(s)</string>
-    <string name="title">Titulo</string>
-    
+    <string name="title">Title</string>
     <string-array name="providers">
         <item>None, please</item>
         <item>GPS via satellites!</item>
@@ -46,7 +46,8 @@
         <item>NONE</item>
         <item>gps</item>
         <item>network</item>
-    </string-array><string-array name="interval">
+    </string-array>
+    <string-array name="interval">
         <item>Never</item>
         <item>Fifteen minutes</item>
         <item>Half hour</item>
@@ -65,5 +66,4 @@
     <string name="titleRefresh">Refresh</string>
     <string name="summaryProvider">Summary</string>
     <string name="titleProvider">Location Provider</string>
-
 </resources>

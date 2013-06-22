@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<string name="summaryUpdaterInterval">How often should Updater service run?</string>
+	<string name="titleUpdaterInterval">Updater Interval</string>
     <string name="app_name">Yamba</string>
     <string name="hello_world">Hola mundo!!</string>
     <string name="menu_settings">Configuraciones</string>
@@ -17,13 +18,13 @@
 	<string name="summaryApiRoot">Ingrese la URL de su servicio</string>
 	<string name="titlePrefs">Preferencias</string>
 	<string name="titleItemPrefs">Preferencias</string>
-    	<string name="titleServiceStop">Stop Service</string>
+    <string name="titleServiceStop">Stop Service</string>
 	<string name="titleServiceStart">Start Service</string>
 	<string name="titleTimeline"> Time line</string>
 	<string name="titlePurge">Purge Data</string>
 	<string name="msgAllDataPurged">Al data has been purged</string>
 	<string name="msgSetupPrefs">Please enter your name, password and server to use</string>
-		    <string name="Slashdot">Slashdot</string>
+	<string name="Slashdot">Slashdot</string>
     <string name="minago">10 minutes ago</string>
     <string name="Firefox">Firefox comes to Android</string>
 	    <string name="send_timeline_notifications_permission_label">Sends Timeline Notifications</string>
@@ -32,5 +33,38 @@
     <string name="receive_timeline_notifications_permission_description">Allow this application to receive timeline
     notifications from other applications</string>
      <string name="WidgetIconDescription">Widget Icon</string>
-    <string name="msgLastTimelineUpdate">Yamba Widget</string>   
+    <string name="msgLastTimelineUpdate">Yamba Widget</string> 
+          <string name="msgNotificationTitle">New Yamba Status Updates</string>
+  <string name="msgNotificationMessage">You\'ve got %d new status update(s)</string>
+    <string name="title">Titulo</string>
+    <string name="titleRefresh">Refresh</string>
+    <string name="summaryProvider">Summary</string>
+    <string name="titleProvider">Location Provider</string>
+        <string-array name="providers">
+        <item>None, please</item>
+        <item>GPS via satellites!</item>
+        <item>Mobile Network will do</item>
+    </string-array>
+        <string-array name="providerValues">
+        <item>NONE</item>
+        <item>gps</item>
+        <item>network</item>
+    </string-array>
+        <string-array name="interval">
+        <item>Never</item>
+        <item>Fifteen minutes</item>
+        <item>Half hour</item>
+        <item>An hour</item>
+        <item>Half day</item>
+        <item>Day</item>
+    </string-array>
+    <string-array name="intervalValues">
+        <item>0</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+    </string-array>
+    
 </resources>
